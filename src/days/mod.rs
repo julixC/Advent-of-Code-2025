@@ -6,6 +6,8 @@ pub mod day02;
 pub mod day03;
 pub mod day04;
 pub mod day05;
+pub mod day06;
+pub mod day07;
 // ... add more days as needed
 
 pub fn load_input_reader(day: u8) -> io::Result<BufReader<File>> {
@@ -53,6 +55,22 @@ pub fn run(day: u8, part: u8) -> Option<String> {
             Err(e) => Some(format!("Error: {}", e)),
         },
         (5, 2) => match day05::part2() {
+            Ok(_) => Some(String::from("Part 2 completed successfully.")),
+            Err(e) => Some(format!("Error: {}", e)),
+        },
+        (6, 1) => match day06::part1() {
+            Ok(_) => Some(String::from("Part 1 completed successfully.")),
+            Err(e) => Some(format!("Error: {}", e)),
+        },
+        (6, 2) => match day06::part2() {
+            Ok(_) => Some(String::from("Part 2 completed successfully.")),
+            Err(e) => Some(format!("Error: {}", e)),
+        },
+        (7, 1) => match day07::part1() {
+            Ok(_) => Some(String::from("Part 1 completed successfully.")),
+            Err(e) => Some(format!("Error: {}", e)),
+        },
+        (7, 2) => match day07::part2() {
             Ok(_) => Some(String::from("Part 2 completed successfully.")),
             Err(e) => Some(format!("Error: {}", e)),
         },
